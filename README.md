@@ -26,3 +26,22 @@
 
 我们为了保证消息的下发效率和保护自己的消息，我们想用 `LocalBroadcastManager` 来发送广播，但是我们
 发现 `LocalBroadcastManager` 并没有 Sticky 类型的，于是我做了修改，且 Sticky 广播被处理后会自动被 remove
+
+# 如何使用
+
+在你的工程根目录下的 `build.gradle` 文件添加如下内容
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+在你的 apk 工程目录下的`build.gradle` 添加
+```
+	dependencies {
+		compile 'com.github.XanderWang:LocalStickyBroadcast:0.0.1'
+	}
+```
